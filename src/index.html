@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crumbs</title>
+    <meta name="description" content="Bakery Website" />
+    <meta name="author" content="MichaelChu" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/base.scss" />
+  </head>
+  <body>
+    <main>
+      <div id="page" class="page overflow-hidden">
+        <!-- Header -->
+        <header id="header" class="navbar navbar--fixed" role="navigation">
+          <button class="icon menu-toggle">
+            <img src="imgs/open-menu.svg" alt="menu icon" />
+          </button>
+
+          <div class="overlay-nav" role="mobile navigation">
+            <button>
+              <a href="javascript:void(0)">&times;</a>
+            </button>
+            <ul class="overlay-content">
+              <li><a href="#story">Story</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="logo">
+            <a href="/"><img src="./imgs/logo.png" alt="crumbs" /></a>
+          </div> -->
+        </header>
+
+        <!-- Main -->
+        <main>
+          <section id="home" class="landing">
+            <div class="section__media">
+              <img src="imgs/short-cake.jpeg" alt="cake with flowers" />
+            </div>
+
+            <div class="landing__headlines">
+              <h3>Crumbs</h3>
+              <p>
+                Bread from diffrent perspective
+              </p>
+              <button class="btn">
+                <a href="#menu">Our Menu</a>
+              </button>
+            </div>
+          </section>
+
+          <div class="block-quote">
+            <span>Baked to be Savior, Made to be Shared</span>
+          </div>
+
+          <section id="story" class="section section--grid">
+            <div class="section__media">
+              <img src="imgs/bread-crumbs.jpg" />
+            </div>
+
+            <div class="section__info">
+              <h5>Our Story</h5>
+              <p>
+                Bread has been baked in our bakery since 1938. In the fourth
+                generation of master bakers, recipes and secrets are being
+                passed on.
+              </p>
+            </div>
+
+            <div class="section__media">
+              <img src="imgs/vannessa.jpg" />
+            </div>
+
+            <div class="section__info">
+              <h5>The Baker</h5>
+              <p>
+                Our fundamental idea, basic, orginalrity along with the modern
+                knowledge and technologies are what distinguishes us.
+              </p>
+            </div>
+          </section>
+
+          <section id="menu" class="section menu-wrapper">
+            <h3>Menu</h3>
+
+            <div class="menu">
+              <div class="menu__list">
+                <div class="specialties">
+                  <div class="menu__title">
+                    Specialties
+                  </div>
+
+                  <div class="item">
+                    <span class="item__name">Meyer Lemon Bar</span>
+                    <span class="item__price">10$</span>
+                    <span class="item__description">
+                      Buttery, crisp shortbread topped with refreshing and
+                      subtly-sweet curd filling.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Snickers Cake</span>
+                    <span class="item__price">15$</span>
+                    <span class="item__description">
+                      Stacked with creamy layers of chocolate, peanut butter,
+                      and some graham crakers.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Peach Cake</span>
+                    <span class="item__price">13$</span>
+                    <span class="item__description">
+                      Rich and juicy summer peach mixed with rum served along
+                      with vanilla ice cream.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Velvet Dark Pudding</span>
+                    <span class="item__price">10$</span>
+                    <span class="item__description">
+                      A bit of milk, chocolate, and vanilla for richness, and a
+                      few silces of orange for a little magic.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Lemon Sandwich Cookies</span>
+                    <span class="item__price">15$</span>
+                    <span class="item__description">
+                      Soft and crunchy with lemony flavor filled with creamy
+                      cheese inside.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Panna Cotta</span>
+                    <span class="item__price">13$</span>
+                    <span class="item__description">
+                      Sweetened cream thickened with gelatin and molded served
+                      with fresh strawberries.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="cupcake">
+                  <div class="menu__title">
+                    Cupcake
+                  </div>
+
+                  <div class="item">
+                    <span class="item__name">Dessert Heaven</span>
+                    <span class="item__price">4$</span>
+                    <span class="item__description">
+                      A delicious banana cupcake filled with caramel topped with
+                      vanilla beans.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Mount Choco</span>
+                    <span class="item__price">6$</span>
+                    <span class="item__description">
+                      A tall chocolate cupcake with buttercream and rainbow
+                      sprinkles.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Toffe Nutcracker</span>
+                    <span class="item__price">5$</span>
+                    <span class="item__description">
+                      A toffe cupcake topped with cream cheese frosting and
+                      walnuts.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ice-cream">
+                  <div class="menu__title">
+                    Ice Cream
+                  </div>
+
+                  <div class="item">
+                    <span class="item__name">Choco Crunch</span>
+                    <span class="item__price">4$</span>
+                    <span class="item__description">
+                      A chocolate ice cream with creamy marshmallow topping with
+                      nuts and cherry.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Gold Rush</span>
+                    <span class="item__price">7$</span>
+                    <span class="item__description">
+                      A butter pecan ice cream beneath a hot bed of butterscotch
+                      hamornized with accented banana.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Caramel Surprise</span>
+                    <span class="item__price">5$</span>
+                    <span class="item__description">
+                      A surprise at the bottom, nuts, cream and cherry at the
+                      top.
+                    </span>
+                  </div>
+                  <div class="item">
+                    <span class="item__name">Cherry Fudge Delight</span>
+                    <span class="item__price">8$</span>
+                    <span class="item__description">
+                      A combination of creamy hot fudge, peanuts, whipped cream,
+                      and cherry to delivery a delight experience.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="menu__media"></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="gallery" class="section instagram">
+            <h3>Gallery</h3>
+
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://image.ibb.co/hvUXyp/crepe.jpg"
+                    alt="crepes"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://image.ibb.co/b7ezdp/choco_chip.jpg"
+                    alt="chocolate chips"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://image.ibb.co/fkFi4U/waffle.jpg"
+                    alt="waffle"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://image.ibb.co/n4HKdp/pops.jpg"
+                    alt="strawberries popsticks"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://image.ibb.co/dH334U/coco.jpg"
+                    alt="coconut cookies"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer section">
+          <div class="contact">
+            <div class="footer-text">
+              <span>123 Sweet Avenue St</span>
+              <span>Toronto, Ontario</span>
+              <span>C4K 3ES</span>
+              <span>Canada</span>
+
+              <div class="subscribe">Subscribe to our newsletter</div>
+            </div>
+
+            <div>
+              <div class="footer-text">
+                <div>(416) 123-4567</div>
+                <div>hello@crumbs.com</div>
+              </div>
+
+              <div class="social">
+                <span>Follow us</span>
+
+                <div class="social__icons">
+                  <span>fb</span>
+                  <span>tw</span>
+                  <span>ins</span>
+                  <span>lkd</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="subscribe">
+              <a href="#home">Top</a>
+            </div>
+          </div>
+
+          <div class="copyright">
+            Copyright mcchu 2018 - All Right Reserved
+          </div>
+        </footer>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>

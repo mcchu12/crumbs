@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Serif+Pro:400,700');
+
+// Typography
+$font-family-serif: 'Source Serif Pro', Georgia, serif;
+$font-family-sans-serif: 'Source Sans Pro', Verdana, sans-serif;
+
+// Border
+$border-radius: 8px;
+$button-border-radius: 4px;
+
+// Shodow
+$shadow-4: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+  0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+$shadow-5: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+  0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+  0 16px 16px rgba(0, 0, 0, 0.12);
+
+// Palette
+$white: #ffffff;
+$black: #000000;
+$text-primary: #322f3d;
+$background-dark: #322f3d;
+$background-paper: #f8f8f9;

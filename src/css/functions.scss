@@ -1,0 +1,33 @@
+@use "sass:list";
+@use "sass:map";
+
+$breakpoint: (
+  'xs': 0px,
+  'sm': 600px,
+  'md': 960px,
+  'lg': 1280px,
+  'xl': 1920px,
+);
+
+// Spacing
+@function spacing($values...) {
+  $spaces: ();
+  $factor: 8px;
+
+  @if length($values) == 0 {
+    @return 0;
+  }
+
+  @each $value in $values {
+    $spaces: list.append($spaces, $value * $factor);
+  }
+
+  @return $spaces;
+}
+
+// Breakpoints
+@mixin up($key) {
+  @media (min-width: map.get($breakpoint, $key)) {
+    @content;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "crumbs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --open",
+    "clean": "rm -rf dist/*",
+    "build:parcel": "parcel build src/index.html",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "author": "Michael Chu",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.2.6",
+    "jquery": "^3.4.1",
+    "parcel-bundler": "^1.12.4",
+    "swiper": "^5.3.6"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3"
+  }
+}
