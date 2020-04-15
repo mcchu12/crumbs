@@ -2,86 +2,59 @@ import Swiper from 'swiper';
 
 import $ from 'jquery';
 
-import { gsap } from 'gsap';
+import { gsap, Power1 } from 'gsap';
 
-/*
-  This function is from AOS library
-  https://github.com/michalsnik/aos
-*/
-const offset = function (el) {
-  let _x = 0;
-  let _y = 0;
-
-  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
-    _x += el.offsetLeft - (el.tagName != 'BODY' ? el.scrollLeft : 0);
-    _y += el.offsetTop - (el.tagName != 'BODY' ? el.scrollTop : 0);
-    el = el.offsetParent;
-  }
-
-  return {
-    top: _y,
-    left: _x,
-  };
-};
-
-// Animation on scroll handler
-const revealOnScroll = function () {
-  const scrollTop = $(window).scrollTop();
-
-  $('[data-animation]').each(function () {
-    const $this = $(this),
-      offsetTop = offset(this).top;
-    const win_height = $(window).height();
-
-    if (!$this.hasClass('animated')) {
-      if (scrollTop + win_height >= offsetTop) {
-        $this.addClass('animated ' + $this.data('animation'));
-      }
-    }
-  });
-};
-
-const navTl = gsap.timeline({ paused: true, duration: 0.2 });
+const navTl = gsap.timeline({ paused: true, duration: 0.1 });
 navTl
-  .set('.overlay-nav', {
+  .set('.nav--overlay', {
     width: '100%',
   })
-  .from('.overlay-nav', {
+  .from('.nav--overlay', {
     autoAlpha: 0,
   })
-  .from('.overlay-content a', {
+  .from('.logo-name', { autoAlpha: 0 })
+  .from('.nav-links a', {
     y: 20,
     autoAlpha: 0,
     stagger: 0.1,
   })
-  .from('.overlay-nav button', {
+  .from('.nav--overlay button', {
     autoAlpha: 0,
     rotate: '-90deg',
   });
 
+if (!!window.IntersectionObserver) {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+          gsap.to(entry.target.children, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.4,
+            ease: Power1.easeOut,
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+  document.querySelectorAll('.animate').forEach((section) => {
+    gsap.set(section.children, { y: 40, autoAlpha: 0 });
+    observer.observe(section);
+  });
+}
+
 $(document).ready(function () {
-  // Add listener on scroll
-  $(window).on('scroll', revealOnScroll);
-
-  // Run scroll animation for elements in viewport once pageload
-  revealOnScroll();
-
   // Menu toggle
   $('.menu-toggle').on('click', () => {
     navTl.play();
   });
 
-  $('.overlay-nav a').on('click', () => {
+  $('.nav--overlay a').on('click', () => {
     navTl.reverse();
-  });
-
-  // Play video
-  $('.play-button').on('click', () => {
-    $('.play-button').css('display', 'none');
-    $('.thumbnail').css({ opacity: '0', 'z-index': '-1' });
-    $('.video--with-thumbnail').css('display', 'block');
-    const url = $('iframe').attr('src') + '&autoplay=1';
-    $('iframe').attr('src', url);
   });
 
   // Smooth Scroll

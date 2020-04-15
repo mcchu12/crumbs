@@ -11,38 +11,39 @@
   </head>
   <body>
     <main>
-      <div id="page" class="page overflow-hidden">
+      <div id="page">
         <!-- Header -->
-        <header id="header" class="navbar navbar--fixed" role="navigation">
+        <header id="header" class="header" role="navigation">
           <button class="icon menu-toggle">
             <img src="imgs/open-menu.svg" alt="menu icon" />
           </button>
 
-          <div class="overlay-nav" role="mobile navigation">
-            <button>
-              <a href="javascript:void(0)">&times;</a>
-            </button>
-            <ul class="overlay-content">
+          <nav class="nav--overlay">
+            <ul class="nav-links">
               <li><a href="#story">Story</a></li>
               <li><a href="#menu">Menu</a></li>
               <li><a href="#gallery">Gallery</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
 
-          <!-- <div class="logo">
-            <a href="/"><img src="./imgs/logo.png" alt="crumbs" /></a>
-          </div> -->
+            <div class="controls">
+              <button>
+                <a href="javascript:void(0)">&times;</a>
+              </button>
+
+              <span class="logo-name">Crumbs</span>
+            </div>
+          </nav>
         </header>
 
         <!-- Main -->
-        <main>
+        <div>
           <section id="home" class="landing">
-            <div class="section__media">
-              <img src="imgs/short-cake.jpeg" alt="cake with flowers" />
+            <div class="section__media overlay-background">
+              <img src="imgs/short-cake.png" alt="cake with flowers" />
             </div>
 
-            <div class="landing__headlines">
+            <div class="landing__headlines animate">
               <h3>Crumbs</h3>
               <p>
                 Bread from diffrent perspective
@@ -53,13 +54,16 @@
             </div>
           </section>
 
-          <div class="block-quote">
-            <span>Baked to be Savior, Made to be Shared</span>
+          <div class="block-quote animate">
+            <div>Baked to be Savior, Made to be Shared</div>
           </div>
 
-          <section id="story" class="section section--grid">
+          <section id="story" class="section section--grid animate">
             <div class="section__media">
-              <img src="imgs/bread-crumbs.jpg" />
+              <!-- <img src="imgs/bread-crumbs.jpg" /> -->
+              <video autoplay loop muted>
+                <source src="imgs/croissant.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <div class="section__info">
@@ -72,7 +76,7 @@
             </div>
 
             <div class="section__media">
-              <img src="imgs/vannessa.jpg" />
+              <img src="imgs/bread-crumbs.jpg" />
             </div>
 
             <div class="section__info">
@@ -84,7 +88,7 @@
             </div>
           </section>
 
-          <section id="menu" class="section menu-wrapper">
+          <section id="menu" class="section menu-wrapper animate">
             <h3>Menu</h3>
 
             <div class="menu">
@@ -219,48 +223,33 @@
             </div>
           </section>
 
-          <section id="gallery" class="section instagram">
+          <section id="gallery" class="section instagram animate">
             <h3>Gallery</h3>
 
             <div class="swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img
-                    src="https://image.ibb.co/hvUXyp/crepe.jpg"
-                    alt="crepes"
-                  />
+                  <img src="imgs/breads.jpg" alt="breads" />
                 </div>
                 <div class="swiper-slide">
-                  <img
-                    src="https://image.ibb.co/b7ezdp/choco_chip.jpg"
-                    alt="chocolate chips"
-                  />
+                  <img src="imgs/chocolate.jpg" alt="chocolate cake" />
                 </div>
                 <div class="swiper-slide">
-                  <img
-                    src="https://image.ibb.co/fkFi4U/waffle.jpg"
-                    alt="waffle"
-                  />
+                  <img src="imgs/coconut.jpg" alt="coconut cake" />
                 </div>
                 <div class="swiper-slide">
-                  <img
-                    src="https://image.ibb.co/n4HKdp/pops.jpg"
-                    alt="strawberries popsticks"
-                  />
+                  <img src="imgs/coffee.jpg" alt="coffee" />
                 </div>
                 <div class="swiper-slide">
-                  <img
-                    src="https://image.ibb.co/dH334U/coco.jpg"
-                    alt="coconut cookies"
-                  />
+                  <img src="imgs/jam.jpg" alt="jams and bread" />
                 </div>
               </div>
             </div>
           </section>
-        </main>
+        </div>
 
         <!-- Footer -->
-        <footer id="contact" class="footer section">
+        <footer id="contact" class="footer section animate">
           <div class="contact">
             <div class="footer-text">
               <span>123 Sweet Avenue St</span>
