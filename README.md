@@ -1,6 +1,6 @@
 # Crumbs
 
-One page website built with HTML, CSS, JS along with other third parties libraries: gsap, swiper
+One page website built with HTML, CSS, JS along with other third party libraries: gsap, swiper
 
 #### Demo: https://crumbs-3c245.web.app/
 
