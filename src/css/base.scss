@@ -323,6 +323,15 @@ p {
 .section__media {
   position: relative;
   margin-bottom: spacing(2);
+
+  &--overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+    & img {
+      position: relative;
+      z-index: -1;
+    }
+  }
 }
 
 .section__info {

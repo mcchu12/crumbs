@@ -32,7 +32,7 @@ if (!!window.IntersectionObserver) {
             autoAlpha: 1,
             y: 0,
             duration: 1,
-            stagger: 0.4,
+            stagger: 0.1,
             ease: Power1.easeOut,
           });
           observer.unobserve(entry.target);
