@@ -15,7 +15,7 @@
     "gsap": "^3.2.6",
     "jquery": "^3.4.1",
     "parcel-bundler": "^1.12.4",
-    "swiper": "^5.3.6"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "sass": "^1.26.3"
